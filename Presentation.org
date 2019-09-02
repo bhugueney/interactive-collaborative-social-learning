@@ -1,4 +1,3 @@
-# Local IspellDict: en
 #+STARTUP: showeverything
 #+INCLUDE: "config.org"
 
