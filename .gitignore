@@ -1,0 +1,13 @@
+auto
+public
+tests
+*.class
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.tex~
+*.tex
+*.pdf

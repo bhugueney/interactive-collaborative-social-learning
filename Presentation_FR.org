@@ -1,0 +1,338 @@
+# Local IspellDict: fr
+#+STARTUP: showeverything
+#+INCLUDE: "config.org"
+
+#+OPTIONS: reveal_klipsify_src:t
+#+REVEAL_MIN_SCALE: 1.0
+#+REVEAL_MAX_SCALE: 1.0
+
+# Enable display of SQL result table, which is HTML.
+# Warning! This is a global setting for the entire presentation.
+# See https://github.com/viebel/klipse/issues/346
+#+REVEAL_KLIPSE_EXTRA_CONFIG: window.klipse_settings.editor_type = "html";
+
+# Some optional settings for CodeMirror.
+#+REVEAL_CODEMIRROR_CONFIG: codemirror_options_in: {
+#+REVEAL_CODEMIRROR_CONFIG:   lineNumbers: true,
+#+REVEAL_CODEMIRROR_CONFIG:   autoCloseBrackets: true
+#+REVEAL_CODEMIRROR_CONFIG: }
+
+#+TITLE: Apprentissage Interactif, Social et Collaboratif
+#+AUTHOR: Bernard Hugueney
+
+
+* Meta
+
+URL: https://huit.re/_R4AVJLP
+#+REVEAL_HTML: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABjAQAAAACnQIM4AAAA7UlEQVQ4jc3UsW3EMAwFUB5UsLwF%0ABGgNdVrJWsBnLWCvpE5rGNACVOfCCEMnyDmNQhd3QFTpdaQ+KeDfB/6xCGCAumS4aWq8x622IhdN%0A2Y5hfRSIF/TYTLqmuJnlingf0Mazsq6kv1hsPLvtSg4FTucLdkW4Dt4QuKRLqnAzVFUfACPCPX/3%0A95coSFx2CIY1tbwD1pR/EuuLi5txv2VOmgjt6HkKa9TEbOTNZm9YEyGANxO4RdORA5rErmmSbMcg%0AU6Dra64lLseqZFr5WYumUinY+wXFbFiWQNUx10z+WVlXx077OmFtmt7/97xCn8TzqmvusZvKAAAA%0AAElFTkSuQmCC"  height=400 width=400 >
+
+[[https://gitlab.com/bhugueney/emacs-reveal-howto/blob/master/Presentation_FR.org][Lien vers la source de cette]] que  [[https://gitlab.com/bhugueney/emacs-reveal-howto/edit/master/Presentation_FR.org][vous pouvez éditer]] (si besoin, [[https://docs.gitlab.com/ee/user/project/members/#request-access-to-a-project][demander les droits]])
+
+[[https://gitlab.com/bhugueney/emacs-reveal-howto/issues][Lien pour faire des suggestions / commentaires]]
+
+[[https://bhugueney.gitlab.io/emacs-reveal-howto/Presentation.html?print-pdf][Lien vers une version imprimable
+]]
+[[https://interactive-social-learning.fr/Presentation.html][Link to an En_us version]]
+#+BEGIN_NOTES
+Ajouter des notes, explications et informations complémentaires partout !☺
+#+END_NOTES
+
+
+* L'objectif
+
+La révolution informatique n'est pas encore advenue en ce qui concerne les supports d'apprentissage.
+
+
+Cf. traitement de texte \rightarrow wikis.
+
+
+** Interactivité : Fragments de code exécutables dans les supports d'apprentissage
+Retour gratifiant :
+- gratification immédiate
+- validation des intuitions
+
+** Social : Publication des productions des apprenants
+
+Retour et appréciations par les pairs et/ou l'entourage de l'apprenant.
+
+
+** Collaboratif : élaboration collectives des supports d'apprentissage
+
+Supports d'apprentissage disponibles sous une forme
+facilement éditable (source) dans un dépôt versionné (git) avec
+système de commentaires/requêtes (/issues/).
+
+Les apprenants peuvent donc partager leurs :
+- commentaires
+- questions
+- améliorations
+
+La décentralisation (multiplicité de versions clonées) permet la personalisation des supports d'enseignement (apprentissage !)
+(e.g. QCM, flashcards)
+
+* Implémentations
+
+** Interactivité 1/2
+
+QCM basés sur [[https://gitlab.com/schaepermeier/reveal.js-quiz][une adaptation à reveal.js]] de [[https://github.com/jewlofthelotus/SlickQuiz][SlickQuiz]].
+
+À utiliser par les apprenants pour pratiquer la mémorisation par [[https://ncase.me/remember/fr.html][Repetition Espacée]].
+
+** QCM
+
+#+REVEAL_HTML: <script data-quiz src="./quizzes/sample-quiz_FR.js"></script>
+
+Le QCM peut facilement être édité sous forme de [[https://gitlab.com/bhugueney/emacs-reveal-howto/blob/master/quizzes/sample-quiz_FR.js][fichier text (JSON)]].
+
+** Interactivité 2/2
+
+Fragments de code interactifs pour retour immédiat.
+
+1. Exécution côté client ([[https://github.com/viebel/klipse][Klipse]]) :
+   - Javascript
+   - HTML
+   - Python basique
+   - SQL basique 
+   - Clojurescript
+2. Exécution côté serveur ([[https://github.com/twosigma/beakerx][BeakerX]]) :
+   - Java
+   - C++
+   - Python
+   - SQL
+   - \dots
+
+** Code HTML interactif 
+
+#+BEGIN_SRC html
+<h1 class="whatever">Ceci est un titre de niveau 1</h1>
+<p>Pour contacter Michael :</p>
+
+<ul>
+  <li><a href="https://example.com">Site Web</a></li>
+  <li><a href="mailto:m.bluth@example.com">E-mail</a></li>
+  <li><a href="tel:+123456789">téléphone</a></li>
+</ul>
+#+END_SRC
+
+** Code Javascript interactif
+#+BEGIN_SRC js
+function f(x){
+  var res=x+x;
+  console.log("x+x=" +res);
+}
+f(2);
+f("2");
+[1,2,3].map(function(x){ return x + 1;})
+#+END_SRC
+
+** Code Python interactif
+#+REVEAL_HTML: <script>Sk.configure({  __future__: Sk.python3});</script>
+
+#+BEGIN_SRC python
+import sys
+def f(x):
+  res=x+x;
+  sys.stdout.write("x+x=");# no new line
+  print(res);
+  
+f(2);
+f("2");
+print(map(lambda x :x+1,[1,2,3]))
+#+END_SRC
+#+BEGIN_NOTES
+En pratique Python 2, malheureusement.
+#+END_NOTES
+** Code Python interactif avec graphisme
+#+BEGIN_SRC python
+import turtle
+t= turtle.Turtle()
+t.speed(0)
+n= 10
+for i in range(10):
+  t.circle(80)
+  t.left(360/n)
+#+END_SRC
+#+BEGIN_NOTES
+Corrigez le "bug" !
+#+END_NOTES
+
+** Code SQL interactif 1/4
+   #+begin_src sql
+   CREATE TABLE Software (Name varchar(256), License varchar(64), Rating integer);
+   INSERT INTO Software VALUES
+      ("GNU Emacs", "GPLv3", 5),
+      ("GNU/Linux", "FLOSS", 4),
+      ("Powerpoint", "Proprietary", 1);
+   #+end_src
+
+** Code SQL interactif 2/4
+   #+begin_src sql
+   SELECT * FROM Software;
+   #+end_src
+** Code SQL interactif 3/4
+   #+begin_src sql
+   CREATE TABLE License (Name varchar(64), Freedom boolean);
+   INSERT INTO License VALUES
+      ("GPLv3", 'true'),
+      ("FLOSS", 'true'),
+      ("Proprietary", 'false');
+   #+end_src
+
+** Code SQL interactif 4/4
+   #+begin_src sql
+   SELECT Software.Name, Software.Rating FROM Software 
+   INNER JOIN License ON 
+   Software.license = License.Name
+   WHERE License.Freedom = 'true'
+   ORDER BY Sofware.Rating DESC;
+   #+end_src
+
+
+** Hébergement des productions
+
+- [[https://docs.gitlab.com/ee/ci/][Gitlab CI/CD]] et [[https://docs.gitlab.com/ee/user/project/pages/][Gitlab Pages]]
+- [[https://github.com/actions][Github Actions]] et [[https://pages.github.com/][Github Pages]]
+- [[https://github.com/bhugueney/asciidoctor-revealjs-klipse/blob/master/.travis.yml][Travis]]
+- [[https://mybinder.org/][mybinder.org]] pour les Notebooks
+
+** Partage des retours et commentaires
+- [[https://docs.gitlab.com/ee/user/project/issues/][Gitlab issues]] et [[https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html][merge request]]
+- [[https://help.github.com/en/articles/creating-an-issue][Github issues]] et [[https://help.github.com/en/articles/about-pull-requests][pull request]] 
+
+
+** Collaboration
+Barrière à l'entrée faible avec le format texte, la génération des supports étant automatisée par Intégration Continue.
+- org mode :
+  - \rightarrow reveal.js avec [[https://gitlab.com/oer/emacs-reveal-howto][emacs-reveal]]
+  - \rightarrow Notebooks avec [[https://github.com/jkitchin/ox-ipynb][ox-ipynb]]
+- asciidoc \rightarrow reveal.js avec [[https://github.com/bhugueney/asciidoctor-revealjs-klipse][asciidoctor-revealjs-klipse]]
+- markdown \rightarrow Notebooks avec [[https://github.com/mwouts/jupytext][jupytext]]
+
+Cf.  [[Meta][premier écran]].
+Les licences doivent permettre la collaboration (cf. [[https://oer.gitlab.io/][Open Educational Resources]]).
+* Misc
+Illustrations à partir de texte (code source).
+** Ditaa
+[[http://ditaa.sourceforge.net/][DIagrams Through Ascii Art]] :
+#+BEGIN_SRC ditaa :file img/ditaa-example_FR.png :exports both
+    +--------+   +-------+    /---------\
+    |        | --+ ditaa +--> |         |
+    |Document|   +-------+    |diagramme|
+    |  Texte |   |!magie!|    | cRED    |
+    |     {d}|   | {io}  |    |         |
+    +---+----+   +-------+    \---------/
+        :                          ^
+        |   Beaucoup de travail    |
+        +--------------------------+
+#+END_SRC
+** Graphviz
+La [[https://www.graphviz.org/][référence pour les graphes]] :
+#+BEGIN_SRC dot :file img/dot-example_FR.svg :exports both
+digraph structs {
+	node[shape=record]
+	struct1 [label="<f0> gauche|<f1> mil\ ieu|<f2> droite"];
+	struct2 [label="{<f0> un|<f1> deux\n\n\n}" shape=Mrecord];
+	struct3 [label="bonjour\nle\ monde |{ b |{c|<here> d|e}| f}| g | h"];
+	struct1:f1 -> struct2:f0;
+	struct1:f0 -> struct3:f1;
+}
+#+END_SRC
+#+BEGIN_NOTES
+Export possible vers PNG ou SVG.
+#+END_NOTES
+
+** Plantuml
+[[http://plantuml.com/][PlantUML]] pour les diagrammes UML :
+** Diagrammes de séquence
+#+BEGIN_SRC plantuml :file img/plantuml-seq-diag-example_FR.png :exports both
+Alice->Bob : hello
+note left: "ceci est une premi&#232;re note"
+Bob->Alice : ok
+note right: ceci est une autre note
+Bob->Bob : Je r&#233;fl&#233;chis
+note left
+	une note peut
+	aussi &#234;tre d&#233;finie
+	sur plusieurs lignes
+end note
+#+END_SRC
+
+#+RESULTS:
+[[file:img/plantuml-seq-diag-example_FR.png]]
+
+** Diagrammes de cas d'utilisation
+#+BEGIN_SRC plantuml :file img/plantuml-use-case-diag-example_FR.png :exports both
+:Administrateur Principal: as Admin
+(Utilise l'application) as (Use)
+Utilisateur -> (Lancer)
+Utilisateur --> (Use)
+Admin ---> (Use)
+note right of Admin : Ceci est un exemple.
+note right of (Use)
+  Une note peut aussi
+  &#234;tre sur plusieurs lignes
+end note
+note "Cette note est reli&#233;e\n&#224; plusieurs objets." as N2
+(Lancer) .. N2
+N2 .. (Use)
+#+END_SRC
+
+#+RESULTS:
+[[file:img/plantuml-use-case-diag-example_FR.png]]
+
+** Diagrammes de classe
+#+BEGIN_SRC plantuml :file img/plantuml-class-diag-example_FR.png :exports both
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+  Object[] elementData
+  size()
+}
+
+enum TimeUnit {
+  JOURS
+  HEURES
+  MINUTES
+}
+
+annotation SuppressWarnings
+
+#+END_SRC
+** Diagrammes d'activité
+#+BEGIN_SRC plantuml :file img/plantuml-activity-diag-example_FR.png :exports both
+start
+
+if (Graphviz install&#233;?) then (oui)
+  :g&#233;n&#233;rer tous\nles diagrammes;
+else (non)
+  :g&#233;n&#233;rer seulement
+  les diagrammes de __s&#233;quence__ et d'__activit&#233;__;
+endif
+
+stop
+#+END_SRC
+
+#+RESULTS:
+[[file:img/plantuml-activity-diag-example_FR.png]]
+
+** Diagrammes d'état
+#+BEGIN_SRC plantuml :file img/plantuml-state-diag-example_FR.png :exports both
+[*] -up-> Premier
+Premier -right-> Deuxieme
+Deuxieme --> Troisieme
+Troisieme -left-> Dernier
+
+#+END_SRC
+
+#+RESULTS:
+[[file:img/plantuml-state-diag-example_FR.png]]

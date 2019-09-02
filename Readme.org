@@ -1,0 +1,4 @@
+#+TITLE: Lightweight interactive collaborative presentations
+#+AUTHOR: Bernard Hugueney
+
+* TODO Intro
