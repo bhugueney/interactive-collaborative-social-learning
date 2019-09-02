@@ -1,7 +1,7 @@
 #+STARTUP: showeverything
 #+INCLUDE: "config.org"
 
-#+OPTIONS: reveal_klipsify_src:t
+#+OPTIONS: reveal_klipsify_src:t ^:{}
 #+REVEAL_MIN_SCALE: 1.0
 #+REVEAL_MAX_SCALE: 1.0
 

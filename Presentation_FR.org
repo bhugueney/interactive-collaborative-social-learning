@@ -1,7 +1,7 @@
 #+STARTUP: showeverything
 #+INCLUDE: "config.org"
 
-#+OPTIONS: reveal_klipsify_src:t
+#+OPTIONS: reveal_klipsify_src:t ^:{}
 #+REVEAL_MIN_SCALE: 1.0
 #+REVEAL_MAX_SCALE: 1.0
 
@@ -30,7 +30,7 @@ URL: https://huit.re/EogTcHcX
 [[https://gitlab.com/bhugueney/interactive-collaborative-social-learning/issues][Lien pour faire des suggestions / commentaires]]
 
 [[https://bhugueney.gitlab.io/interactive-collaborative-social-learning/Presentation_FR.html?print-pdf][Lien vers une version imprimable]]
-[[https://bhugueney.gitlab.io/interactive-collaborative-social-learning/Presentation.html][Link to an En_us version]]
+[[https://bhugueney.gitlab.io/interactive-collaborative-social-learning/Presentation.html][Link to an EN_us version]]
 #+BEGIN_NOTES
 Ajouter des notes, explications et informations complémentaires partout !☺
 #+END_NOTES
