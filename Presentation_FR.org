@@ -1,4 +1,4 @@
-# Local IspellDict: fr
+ Local IspellDict: fr
 #+STARTUP: showeverything
 #+INCLUDE: "config.org"
 
@@ -23,16 +23,15 @@
 
 * Meta
 
-URL: https://huit.re/_R4AVJLP
-#+REVEAL_HTML: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABjAQAAAACnQIM4AAAA7UlEQVQ4jc3UsW3EMAwFUB5UsLwF%0ABGgNdVrJWsBnLWCvpE5rGNACVOfCCEMnyDmNQhd3QFTpdaQ+KeDfB/6xCGCAumS4aWq8x622IhdN%0A2Y5hfRSIF/TYTLqmuJnlingf0Mazsq6kv1hsPLvtSg4FTucLdkW4Dt4QuKRLqnAzVFUfACPCPX/3%0A95coSFx2CIY1tbwD1pR/EuuLi5txv2VOmgjt6HkKa9TEbOTNZm9YEyGANxO4RdORA5rErmmSbMcg%0AU6Dra64lLseqZFr5WYumUinY+wXFbFiWQNUx10z+WVlXx077OmFtmt7/97xCn8TzqmvusZvKAAAA%0AAElFTkSuQmCC"  height=400 width=400 >
+URL: https://huit.re/EogTcHcX
+#+REVEAL_HTML: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABjAQAAAACnQIM4AAAA60lEQVQ4jc3UOw7DIAwGYCMGtuYC%0ASFyDLVcqFwjlAu2V2LgGUi4AGwOq6z7UZkkcdajqKd9g6bexArgs+GMVAJ/yEEFwqtinsYtEH5yi%0Adg0xgduhadTDbvk9wu6jXiRbFc3nknafaVdFVVt2nw2uqijqMCfVPaea5NnSgl/JNlSAHsFclRac%0AMJmiZGjmwqlYLeJc1Bw4YZT4UOVUkXaWXeuC09XSfNnjM8uWaoOBgoNETlTFmooycKK3PQJdAS+6%0AF5ck9V1Y3e9avpNta7JzaOB36DjCYTSVFWWJWSySrek+n6VuDJx+/Sf6TjcouK7xEcxOugAAAABJ%0ARU5ErkJggg=="  height=400 width=400 >
 
-[[https://gitlab.com/bhugueney/emacs-reveal-howto/blob/master/Presentation_FR.org][Lien vers la source de cette]] que  [[https://gitlab.com/bhugueney/emacs-reveal-howto/edit/master/Presentation_FR.org][vous pouvez éditer]] (si besoin, [[https://docs.gitlab.com/ee/user/project/members/#request-access-to-a-project][demander les droits]])
+[[https://gitlab.com/bhugueney/interactive-collaborative-social-learning/blob/master/Presentation_FR.org][Lien vers la source de cette]] que  [[https://gitlab.com/bhugueney/interactive-collaborative-social-learning/edit/master/Presentation_FR.org][vous pouvez éditer]] (si besoin, [[https://docs.gitlab.com/ee/user/project/members/#request-access-to-a-project][demander les droits]])
 
-[[https://gitlab.com/bhugueney/emacs-reveal-howto/issues][Lien pour faire des suggestions / commentaires]]
+[[https://gitlab.com/bhugueney/interactive-collaborative-social-learning/issues][Lien pour faire des suggestions / commentaires]]
 
-[[https://bhugueney.gitlab.io/emacs-reveal-howto/Presentation.html?print-pdf][Lien vers une version imprimable
-]]
-[[https://interactive-social-learning.fr/Presentation.html][Link to an En_us version]]
+[[https://bhugueney.gitlab.io/interactive-collaborative-social-learning/Presentation_FR.html?print-pdf][Lien vers une version imprimable]]
+[[https://bhugueney.gitlab.io/interactive-collaborative-social-learning/Presentation.html][Link to an En_us version]]
 #+BEGIN_NOTES
 Ajouter des notes, explications et informations complémentaires partout !☺
 #+END_NOTES
@@ -82,7 +81,7 @@ QCM basés sur [[https://gitlab.com/schaepermeier/reveal.js-quiz][une adaptation
 
 #+REVEAL_HTML: <script data-quiz src="./quizzes/sample-quiz_FR.js"></script>
 
-Le QCM peut facilement être édité sous forme de [[https://gitlab.com/bhugueney/emacs-reveal-howto/blob/master/quizzes/sample-quiz_FR.js][fichier text (JSON)]].
+Le QCM peut facilement être édité sous forme de [[https://gitlab.com/bhugueney/interactive-collaborative-social-learning/blob/master/quizzes/sample-quiz_FR.js][fichier text (JSON)]].
 
 ** Interactivité 2/2
 

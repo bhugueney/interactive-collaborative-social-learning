@@ -24,16 +24,16 @@
 
 * Meta
 
-URL: https://huit.re/d7JFxy-B
-#+REVEAL_HTML: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABjAQAAAACnQIM4AAAA8ElEQVQ4jc3UMa7DIAwG4L9iYHvv%0AAkhcg40rhQs05QLJldi4RiQuYLYMVf1ctVK6JM7wnvQsBr4BycYG8GfgH4uAAa0XXDR1vqd1Gats%0ANBV3jW2uSCc0rm48p3RSfB+s6Vtmu5L6UnVpq3ZXEhQ5bze4K7LLEAzBZ01cPLOf0FQRFlg/l1d9%0AR3oEI0cpGtZEAV+Wc3nfxIF4bbkul8JZE0XIFCAuSRPXNlmewiuXI5EF4G/wsyaJXqVdvmuS3o4s%0A7dX1nBc4OceqZFrZ4Z2LInkBFN33Ccm88GqyKsklyNoy29PzTQdzs61r+vu/5zf0A7J0pjY9veCL%0AAAAAAElFTkSuQmCC"  height=400 width=400 >
+URL: https://huit.re/1DKEDjCL
+#+REVEAL_HTML: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABjAQAAAACnQIM4AAAA50lEQVQ4jc3Uuw3DIBAG4LOuoMwC%0ASKxBx0qwQGwWcFZyxxqWvAB0LlAu51iR0zhHkUi5iq/77yGA3gv+WBnAw3yZoJNUqIa1hsQPSZO+%0AurlLEBrUrzq0KTSKqldYjmSn4v5C0uHo9lRc2dXumOCpspq9xQwminJYyIywNAg49W3a+/skWrdh%0AeIck6W61V0uc9kl8lDM8MFaUlKF6uwxuDpK4BkejRZKUOQuYAcxN0nMPGMkUSbzbnnebZD3vmtdl%0ASNR21/jKIqhPHEdfGsR33a8YRXEW0t4eyc603TXhoJYi6fd/zzf0AI1Prc5jGr5ZAAAAAElFTkSu%0AQmCC"  height=400 width=400 >
 
-[[https://gitlab.com/bhugueney/emacs-reveal-howto/blob/master/Presentation.org][Link to source of this presentation]] that [[https://gitlab.com/bhugueney/emacs-reveal-howto/edit/master/Presentation.org][you can edit]] (you might need to [[https://docs.gitlab.com/ee/user/project/members/#request-access-to-a-project][request access]])
+[[https://gitlab.com/bhugueney/interactive-collaborative-social-learning/blob/master/Presentation.org][Link to source of this presentation]] that [[https://gitlab.com/bhugueney/interactive-collaborative-social-learning/edit/master/Presentation.org][you can edit]] (you might need to [[https://docs.gitlab.com/ee/user/project/members/#request-access-to-a-project][request access]])
 
-[[https://gitlab.com/bhugueney/emacs-reveal-howto/issues][Link to post requests]]
+[[https://gitlab.com/bhugueney/interactive-collaborative-social-learning/issues][Link to post requests]]
 
-[[https://bhugueney.gitlab.io/emacs-reveal-howto/Presentation.html?print-pdf][Link to printable version]]
+[[https://bhugueney.gitlab.io/interactive-collaborative-social-learning/?print-pdf][Link to printable version]]
 
-[[https://interactive-social-learning.fr/Presentation_FR.html][Lien vers une version FR_fr]]
+[[https://bhugueney.gitlab.io/interactive-collaborative-social-learning/Presentation_FR.html][Lien vers une version FR_fr]]
 
 #+BEGIN_NOTES
 Add speaker notes everywhere ! ☺
@@ -79,7 +79,7 @@ Should be used by learners to practice [[https://ncase.me/remember/][Spaced Repe
 
 #+REVEAL_HTML: <script data-quiz src="./quizzes/sample-quiz.js"></script>
 
-The quiz can easily edited from [[https://gitlab.com/bhugueney/emacs-reveal-howto/blob/master/quizzes/sample-quiz.js][the text file in JSON]].
+The quiz can easily edited from [[https://gitlab.com/bhugueney/interactive-collaborative-social-learning/blob/master/quizzes/sample-quiz.js][the text file in JSON]].
 ** Interactivity 2/2
 
 Live code fragments for immediate feedback.
